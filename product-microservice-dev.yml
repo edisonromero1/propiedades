@@ -1,0 +1,36 @@
+spring:
+  application:
+    name: product-microservice
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/springboot
+    username: root
+    password:
+    driverClassName: com.mysql.jdbc.Driver
+    testWhileIdle: true
+    validationQuery: SELECT 1
+  
+  jpa:
+    showSql: true
+
+logging:
+  level:
+    org:
+      hibernate: 
+        SQL: debug
+
+server:
+  port: 0
+
+eureka:
+  instance:
+    hostname: srvlocal
+    instanceId: ${spring.application.name}:${random.uuid}
+    preferIpAddress: false
+    lease-renewal-interval-in-seconds: 30
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:8762/eureka/
+    
