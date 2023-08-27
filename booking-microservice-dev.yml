@@ -1,7 +1,15 @@
 spring:
   application:
     name: booking-microservice
-  
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/booking3
+    username: root
+    password:
+    driverClassName: com.mysql.jdbc.Driver
+    testWhileIdle: true
+    validationQuery: SELECT 1
+    
   jpa:
     showSql: true
 
