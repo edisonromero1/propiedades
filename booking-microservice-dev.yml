@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: booking-microservice
+  
+  jpa:
+    showSql: true
+
+logging:
+  level:
+    org:
+      hibernate: 
+        SQL: debug
+
+server:
+  port: 0
+
+eureka:
+  instance:
+    hostname: srvlocal
+    instanceId: ${spring.application.name}:${random.uuid}
+    preferIpAddress: false
+    lease-renewal-interval-in-seconds: 30
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:8762/eureka/
+    
