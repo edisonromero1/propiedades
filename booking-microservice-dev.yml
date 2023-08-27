@@ -1,6 +1,6 @@
 spring:
   application:
-    name: booking-microservice2
+    name: booking-microservice
   
   jpa:
     showSql: true
