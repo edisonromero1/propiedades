@@ -3,7 +3,7 @@ spring:
     name: product-microservice
 
   datasource:
-    url: jdbc:mysql://localhost222:3307/springboot
+    url: jdbc:mysql://localhost:3306/springboot
     username: root
     password:
     driverClassName: com.mysql.jdbc.Driver
