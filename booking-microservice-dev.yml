@@ -3,7 +3,7 @@ spring:
     name: booking-microservice
 
   datasource:
-    url: jdbc:mysql://localhost:3306/booking3
+    url: jdbc:mysql://localhost:3306/booking
     username: root
     password:
     driverClassName: com.mysql.jdbc.Driver
